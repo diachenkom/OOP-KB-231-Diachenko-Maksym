@@ -13,7 +13,7 @@ public class task_08 {
                 break;
             }
             num1 = num1 + num;
-            i = i + 1;
+            i++;
         }
         double middle = num1 / i;
         System.out.println("The middle value is: " + middle);

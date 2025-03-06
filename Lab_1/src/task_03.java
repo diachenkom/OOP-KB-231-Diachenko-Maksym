@@ -7,7 +7,7 @@ public class task_03 {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter password:");
-        Integer int_passwd = scan.nextInt();
+        int int_passwd = scan.nextInt();
         if (int_passwd == password){
             System.out.println("Hello Agent!");
         }

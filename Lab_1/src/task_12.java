@@ -15,9 +15,7 @@ public class task_12 {
 
     public static void getSumCheckArray(int[] array){
         for (int i=2; i < array.length; i++){
-            if (array[i] == array[i-1] + array[i-2]){
-                bool_array[i] = true;
-            }
+            bool_array[i] = (array[i] == array[i-1] + array[i-2]);
         }
     }
 }

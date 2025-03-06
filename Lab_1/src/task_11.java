@@ -10,10 +10,10 @@ public class task_11 {
     }
 
     public static int sum(int[] array){
-        int sum1 = 0;
-        for (int i = 0; i < array.length; i++){
+        int sum1 = array[0];
+        for (int i = 1; i < array.length; i++){
             if (array[i] % 2 == 0){
-                sum1 = sum1 + array[i];
+                sum1 += array[i];
             }
         }
         return sum1;
