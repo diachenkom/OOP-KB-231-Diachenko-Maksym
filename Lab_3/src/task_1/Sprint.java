@@ -38,6 +38,12 @@ class Sprint {
     }
 
     public int getTotalEstimate() {
-        return tickets.stream().mapToInt(Ticket::getEstimate).sum();
+        int totalEstimate = 0;
+        int i=0;
+        for (Ticket ticket : tickets) {
+            totalEstimate = totalEstimate + tickets.get(i).getEstimate();
+            i++;
+        }
+        return totalEstimate;
     }
 }
