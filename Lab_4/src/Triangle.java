@@ -1,7 +1,6 @@
 public class Triangle extends Figure {
-    public Point a, b, c;
+    private Point a, b, c;
     public Triangle(Point a, Point b, Point c){
-        super(a);
         this.a = a;
         this.b = b;
         this.c = c;
@@ -18,7 +17,8 @@ public class Triangle extends Figure {
         }
     }
 
-    public static double getArea(Point a, Point b, Point c){
+    @Override
+    public double area() {
         double AB = new Segment(a,b).length();
         double BC = new Segment(b,c).length();
         double AC = new Segment(a,c).length();
@@ -26,7 +26,8 @@ public class Triangle extends Figure {
         return Math.sqrt(p*(p-AB)*(p-BC)*(p-AC));
     }
 
-    public Point getCentroid(Point a, Point b, Point c){
+    @Override
+    public Point centroid(){
         double Mx = (b.x + c.x)/2;
         double My = (b.y + c.y)/2;
         double Ox = a.x + (Mx - a.x) * 2.0/3.0;
@@ -34,8 +35,8 @@ public class Triangle extends Figure {
         return new Point(Ox,Oy);
     }
 
+    @Override
     public String toString(){
-        return "Triangle[A("+ a.x +","+ a.y +") B("+ b.x +","+ b.y +") C("+ c.x +","+ c.y +")]";
+        return "\nTriangle [A"+ a +" B"+ b +" C"+ c + "]";
     }
 }
-
